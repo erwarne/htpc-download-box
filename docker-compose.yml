@@ -11,7 +11,7 @@ services:
       - PGID=${PGID} # default group id, defined in .env
       - TZ=${TZ} # timezone, defined in .env
     volumes:
-      - ${ROOT}/downloads:/downloads # downloads folder
+      - ${ROOT}/data/torrents:/data # downloads folder
       - ${ROOT}/config/deluge:/config # config files
     ports:
       - 8112:8112
@@ -29,7 +29,7 @@ services:
       - RUN_OPTS=<run options here> #optional
     volumes:
       - ${ROOT}/config/jackett:/config
-      - ${ROOT}/downloads/watch:/downloads
+      - ${ROOT}/data:/data
     ports:
       - 9117:9117
     restart: unless-stopped
@@ -42,9 +42,9 @@ services:
       - PGID=${PGID} # default group id, defined in .env
       - TZ=${TZ} # timezone, defined in .env
     volumes:
-      - /path/to/data:/config
-      - /path/to/tvseries:/tv #optional
-      - /path/to/downloadclient-downloads:/downloads #optional
+      - /mnt/dev/config/sonarr:/config
+      - /mnt/dev/data:/data
+
     ports:
       - 8989:8989
     restart: unless-stopped
@@ -57,9 +57,8 @@ services:
       - PGID=${PGID} # default group id, defined in .env
       - TZ=${TZ} # timezone, defined in .env
     volumes:
-      - /path/to/data:/config
-      - /path/to/movies:/movies #optional
-      - /path/to/downloadclient-downloads:/downloads #optional
+      - /mnt/dev/config/radarr:/config
+      - /mnt/dev/data:/data
     ports:
       - 7878:7878
     restart: unless-stopped

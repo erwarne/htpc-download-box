@@ -16,8 +16,5 @@ docker run hello-world
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 
-# Clone repository to "local" directory
-git clone https://github.com/erwarne/htpc-download-box
-
 # Start up the containers
 docker-compose up -d
