@@ -19,10 +19,11 @@ git clone https://github.com/erwarne/htpc-download-box ./
 
 # Create folder structure
 sudo mkdir data
-cd data
-sudo mkdir -p data/{media,torrents,usenet}
-sudo mkdir -p data/media/{music,movies,tv}
-sudo mkdir -p data/torrents/{music,movies,tv}
-sudo mkdir -p data/usenet/{music,movies,tv}
+sudo mkdir -p /mnt/dev/data/{media,torrents,usenet}
+sudo mkdir -p /mnt/dev/data/media/{music,movies,tv}
+sudo mkdir -p /mnt/dev/data/torrents/{music,movies,tv}
+sudo mkdir -p /mnt/dev/data/usenet/{music,movies,tv}
 sudo mkdir -p /mnt/dev/config/{sonarr,radarr,jackett,deluge,plex}
 
+
+cp -a /mnt/dev/config . /home/eric/dev-htpc/config
