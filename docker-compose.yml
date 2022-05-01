@@ -11,7 +11,7 @@ services:
       - PGID=${PGID} # default group id, defined in .env
       - TZ=${TZ} # timezone, defined in .env
     volumes:
-      - ${ROOT}/data/torrents:/data # downloads folder
+      - /mnt/dev/data:/data # downloads folder
       - /home/eric/dev-htpc/config/deluge:/config # config files
     ports:
       - 8112:8112
