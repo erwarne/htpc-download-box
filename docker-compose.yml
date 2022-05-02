@@ -77,13 +77,13 @@ services:
       - /home/eric/dev-htpc/config/plex/db:/config # plex database
       - /home/eric/dev-htpc/config/plex/transcode:/transcode # temp transcoded files
       - /mnt/dev/data:/data # media library
-    ports:
-      - 32400:32400
-      - 3005:3005
-      - 8324:8324
-      - 32469:32469
-      - 1900:1900
-      - 32410:32410
-      - 32412:32412
-      - 32413:32413
-      - 32414:32414
+    #ports:
+    #  - 32400:32400
+    #  - 3005:3005
+    #  - 8324:8324
+    #  - 32469:32469
+    #  - 1900:1900
+    #  - 32410:32410
+    #  - 32412:32412
+    #  - 32413:32413
+    #  - 32414:32414
