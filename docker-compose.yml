@@ -72,7 +72,7 @@ services:
       - HOSTNAME="dev-htpc-plex"
       - ADVERTISE_IP="http://dev-htpc:32400/"
       #- PLEX_CLAIM="claim-711nErussvxh1PyMnwg7"
-    #network_mode: host
+    network_mode: host
     volumes:
       - /home/eric/dev-htpc/config/plex/db:/config # plex database
       - /home/eric/dev-htpc/config/plex/transcode:/transcode # temp transcoded files
