@@ -71,7 +71,7 @@ services:
       - TZ=${TZ} # timezone, defined in .env
       - HOSTNAME="dev-htpc-plex"
       - ADVERTISE_IP="http://dev-htpc:32400/"
-      - PLEX_CLAIM="claim-s7L7U7oXFUyseeFAcHAA"
+      - PLEX_CLAIM="claim-711nErussvxh1PyMnwg7"
     #network_mode: host
     volumes:
       - /home/eric/dev-htpc/config/plex/db:/config # plex database
