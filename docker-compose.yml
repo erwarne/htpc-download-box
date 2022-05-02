@@ -69,11 +69,14 @@ services:
     restart: unless-stopped
     environment:
       - TZ=${TZ} # timezone, defined in .env
+      - HOSTNAME="dev-htpc-plex"
+      - ADVERTISE_IP="http://dev-htpc:32400/"
+      - PLEX_CLAIM="claim-s7L7U7oXFUyseeFAcHAA"
     #network_mode: host
     volumes:
       - /home/eric/dev-htpc/config/plex/db:/config # plex database
       - /home/eric/dev-htpc/config/plex/transcode:/transcode # temp transcoded files
-      - ${ROOT}/complete:/data # media library
+      - /mnt/dev/data:/data # media library
     ports:
       - 32400:32400
       - 3005:3005
